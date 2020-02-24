@@ -10,7 +10,8 @@ Third Microverse project for Ruby Curriculum
 
 # What it does
 
-We create a ruby executable file which show a hello world in the terminal
+- Created executable file to the project
+- Create folders bin and lib
 
 ## Built With
 
