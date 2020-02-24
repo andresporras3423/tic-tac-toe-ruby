@@ -20,7 +20,7 @@ We create a ruby executable file which show a hello world in the terminal
 
 ## Live Demo
 
-[Live Demo](https://repl.it/@yoxter3423/bubble-sort-ruby-1)
+[Live Demo](https://repl.it/@yoxter3423/tic-tac-toe-ruby) (not working until merge)
 
 ## Authors
 
