@@ -1,6 +1,4 @@
 #!/usr/bin/env ruby
-puts 'Hello World!'
-
 puts 'enter name of player 1:'
 player1 = gets.chomp
 puts 'enter name of player 2:'
