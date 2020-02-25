@@ -22,6 +22,27 @@ class Game
       match.show_board
       puts 'Game was a draw'
     end
+    new_game
+  end
+
+  def new_game
+    play_again=''
+    loop do
+      puts 'do you want to play again?:'
+      puts '1) Yes'
+      puts '2) No'
+      play_again = gets.chomp
+      if play_again != '1' && play_again != '2'
+        puts 'choose a valid option'
+      else
+        break
+      end
+    end
+    if play_again=='1'
+      begin_game
+    else
+      puts 'thank you for playing with us'
+    end
   end
 
   def play_turn
