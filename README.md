@@ -1,17 +1,16 @@
 # tic-tac-toe-ruby
 
-Third Ruby Microverse Project By Ángel Cussi &amp; Oscar Russi
+fourth Ruby Microverse Project By Ángel Cussi &amp; Oscar Russi
 
 ![screenshot](./screenshot.png)
 
-# Bubble sort on Ruby 
+# Tic Tac Toe Ruby
 
-Third Microverse project for Ruby Curriculum
+Fourth Microverse project for Ruby Curriculum
 
 # What it does
 
-- Created executable file to the project
-- Create folders bin and lib
+- Basic flow of the tic tac toe game
 
 ## Built With
 
