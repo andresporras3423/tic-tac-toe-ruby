@@ -1,5 +1,6 @@
-require './player'
-require './match'
+#!/usr/bin/env ruby
+require_relative 'player'
+require_relative 'match'
 
 class Game
   attr_accessor :match, :player1, :player2
@@ -49,7 +50,9 @@ class Game
     match.show_board
     puts match.players[match.turn % 2].name + ', choose your movement (use available numbers): '
     movement = gets.chomp.to_i
-    if match.movements[movement - 1] == '0' || match.movements[movement - 1] == 'x'
+    if match.movements[movement - 1] == nil
+      puts 'please choose a valid spot'
+    elsif match.movements[movement - 1] == '0' || match.movements[movement - 1] == 'x'
       puts 'not available spot'
     else
       match.movements[movement - 1] = match.players[match.turn % 2].symbol
