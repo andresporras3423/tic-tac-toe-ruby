@@ -2,6 +2,7 @@
 require_relative 'player'
 require_relative 'match'
 
+# control the flow of each tic tac toe match
 class Game
   attr_accessor :match, :player1, :player2
   def initialize
@@ -17,11 +18,13 @@ class Game
     begin_game
   end
 
+  # ask for the name of the two players, the two names must be different
   def begin_game
     @match = Match.new([Player.new(player1, 'x'), Player.new(player2, '0')])
     play_game
   end
 
+  # keep playing while no winner and there is possible movements
   def play_game
     play_turn while match.game_continue && match.turn < 9
     if match.turn == 9 && match.game_continue
@@ -31,6 +34,7 @@ class Game
     new_game
   end
 
+  # ask the users if they want to play a new match
   def new_game
     play_again = ''
     loop do
@@ -49,6 +53,7 @@ class Game
     end
   end
 
+  # the current player choose his/her movement
   def play_turn
     match.show_board
     puts match.players[match.turn % 2].name + ', choose your movement (use available numbers): '
@@ -65,5 +70,5 @@ class Game
     end
   end
 end
-
+# begin game
 Game.new

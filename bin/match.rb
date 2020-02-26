@@ -8,6 +8,7 @@ class Match
     @movements = %w[1 2 3 4 5 6 7 8 9]
   end
 
+  # show the current state of the board
   def show_board
     i = 0
     while i < board.length
@@ -21,6 +22,7 @@ class Match
     end
   end
 
+  # change the board after a player turn
   def update_board
     n = 0
     board.each do |i|
@@ -33,6 +35,7 @@ class Match
     end
   end
 
+  # look if some diagonal or the row or the column of the last player movement provides a winner for the game
   def find_winner(move)
     condition1 = (move / 3).ceil * 3
     condition2 = (move - 1) % 3
@@ -40,6 +43,7 @@ class Match
     winner_conditions(condition1, condition2, line)
   end
 
+  # if some diagonal or the row or the colum has the same symbol three times then there is a winner
   def winner_conditions(condition1, condition2, line)
     row1 = (movements[condition1 - 1] + movements[condition1 - 2] + movements[condition1 - 3] == line)
     column1 = (movements[condition2] + movements[condition2 + 3] + movements[condition2 + 6] == line)
