@@ -7,8 +7,15 @@ class Game
   def initialize
     puts 'Enter name of player 1:'
     @player1 = gets.chomp
-    puts 'Enter name of player 2:'
-    @player2 = gets.chomp
+    loop do
+      puts 'Enter name of player 2:'
+      @player2 = gets.chomp
+      if @player1 == @player2
+        puts "please choose a different name for second player"
+      else
+        break
+      end
+    end
     begin_game
   end
 
