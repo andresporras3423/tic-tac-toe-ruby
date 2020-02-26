@@ -10,11 +10,9 @@ class Game
     loop do
       puts 'Enter name of player 2:'
       @player2 = gets.chomp
-      if @player1 == @player2
-        puts "please choose a different name for second player"
-      else
-        break
-      end
+      break unless @player1 == @player2
+
+      puts 'please choose a different name for second player'
     end
     begin_game
   end
@@ -34,19 +32,17 @@ class Game
   end
 
   def new_game
-    play_again=''
+    play_again = ''
     loop do
       puts 'do you want to play again?:'
       puts '1) Yes'
       puts '2) No'
       play_again = gets.chomp
-      if play_again != '1' && play_again != '2'
-        puts 'choose a valid option'
-      else
-        break
-      end
+      break unless play_again != '1' && play_again != '2'
+
+      puts 'choose a valid option'
     end
-    if play_again=='1'
+    if play_again == '1'
       begin_game
     else
       puts 'thank you for playing with us'
@@ -57,7 +53,7 @@ class Game
     match.show_board
     puts match.players[match.turn % 2].name + ', choose your movement (use available numbers): '
     movement = gets.chomp.to_i
-    if match.movements[movement - 1] == nil
+    if match.movements[movement - 1].nil?
       puts 'please choose a valid spot'
     elsif match.movements[movement - 1] == '0' || match.movements[movement - 1] == 'x'
       puts 'not available spot'
@@ -71,4 +67,3 @@ class Game
 end
 
 Game.new
-
