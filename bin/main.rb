@@ -4,7 +4,7 @@ require_relative 'match'
 
 # control the flow of each tic tac toe match
 class Game
-  attr_accessor :match, :player1, :player2
+  attr_reader :match, :player1, :player2
   def initialize
     puts 'Enter name of player 1:'
     @player1 = gets.chomp
