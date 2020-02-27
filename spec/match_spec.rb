@@ -12,7 +12,7 @@ RSpec.describe Match do
     match.update_board
     expect do
       match.find_winner(1)
-    end.to output("").to_stdout
+    end.to output('').to_stdout
     expect(match.game_continue).to eql(true)
     match.turn += 1
     expect do
@@ -22,7 +22,7 @@ RSpec.describe Match do
     match.update_board
     expect do
       match.find_winner(2)
-    end.to output("").to_stdout
+    end.to output('').to_stdout
     expect(match.game_continue).to eql(true)
     match.turn += 1
     expect do
@@ -32,7 +32,7 @@ RSpec.describe Match do
     match.update_board
     expect do
       match.find_winner(3)
-    end.to output("").to_stdout
+    end.to output('').to_stdout
     expect(match.game_continue).to eql(true)
     match.turn += 1
     expect do
@@ -42,7 +42,7 @@ RSpec.describe Match do
     match.update_board
     expect do
       match.find_winner(4)
-    end.to output("").to_stdout
+    end.to output('').to_stdout
     expect(match.game_continue).to eql(true)
     match.turn += 1
     expect do
@@ -52,7 +52,7 @@ RSpec.describe Match do
     match.update_board
     expect do
       match.find_winner(5)
-    end.to output("").to_stdout
+    end.to output('').to_stdout
     expect(match.game_continue).to eql(true)
     match.turn += 1
     expect do
@@ -62,7 +62,7 @@ RSpec.describe Match do
     match.update_board
     expect do
       match.find_winner(6)
-    end.to output("").to_stdout
+    end.to output('').to_stdout
     expect(match.game_continue).to eql(true)
     match.turn += 1
     expect do
@@ -76,7 +76,6 @@ RSpec.describe Match do
     expect(match.game_continue).to eql(false)
   end
 
-
   it 'Test game 2, Ángel wins in the sixth movement' do
     match = Match.new([Player.new('Oscar', 'x'), Player.new('Ángel', '0')])
     expect do
@@ -87,7 +86,7 @@ RSpec.describe Match do
     match.update_board
     expect do
       match.find_winner(2)
-    end.to output("").to_stdout
+    end.to output('').to_stdout
     expect(match.game_continue).to eql(true)
     match.turn += 1
     expect do
@@ -97,7 +96,7 @@ RSpec.describe Match do
     match.update_board
     expect do
       match.find_winner(1)
-    end.to output("").to_stdout
+    end.to output('').to_stdout
     expect(match.game_continue).to eql(true)
     match.turn += 1
     expect do
@@ -107,7 +106,7 @@ RSpec.describe Match do
     match.update_board
     expect do
       match.find_winner(5)
-    end.to output("").to_stdout
+    end.to output('').to_stdout
     expect(match.game_continue).to eql(true)
     match.turn += 1
     expect do
@@ -117,7 +116,7 @@ RSpec.describe Match do
     match.update_board
     expect do
       match.find_winner(4)
-    end.to output("").to_stdout
+    end.to output('').to_stdout
     expect(match.game_continue).to eql(true)
     match.turn += 1
     expect do
@@ -127,7 +126,7 @@ RSpec.describe Match do
     match.update_board
     expect do
       match.find_winner(9)
-    end.to output("").to_stdout
+    end.to output('').to_stdout
     expect(match.game_continue).to eql(true)
     match.turn += 1
     expect do
@@ -151,7 +150,7 @@ RSpec.describe Match do
     match.update_board
     expect do
       match.find_winner(4)
-    end.to output("").to_stdout
+    end.to output('').to_stdout
     expect(match.game_continue).to eql(true)
     match.turn += 1
     expect do
@@ -161,7 +160,7 @@ RSpec.describe Match do
     match.update_board
     expect do
       match.find_winner(1)
-    end.to output("").to_stdout
+    end.to output('').to_stdout
     expect(match.game_continue).to eql(true)
     match.turn += 1
     expect do
@@ -171,7 +170,7 @@ RSpec.describe Match do
     match.update_board
     expect do
       match.find_winner(5)
-    end.to output("").to_stdout
+    end.to output('').to_stdout
     expect(match.game_continue).to eql(true)
     match.turn += 1
     expect do
@@ -181,7 +180,7 @@ RSpec.describe Match do
     match.update_board
     expect do
       match.find_winner(1)
-    end.to output("").to_stdout
+    end.to output('').to_stdout
     expect(match.game_continue).to eql(true)
     match.turn += 1
     expect do
@@ -205,7 +204,7 @@ RSpec.describe Match do
     match.update_board
     expect do
       match.find_winner(4)
-    end.to output("").to_stdout
+    end.to output('').to_stdout
     expect(match.game_continue).to eql(true)
     match.turn += 1
     expect do
@@ -215,7 +214,7 @@ RSpec.describe Match do
     match.update_board
     expect do
       match.find_winner(1)
-    end.to output("").to_stdout
+    end.to output('').to_stdout
     expect(match.game_continue).to eql(true)
     match.turn += 1
     expect do
@@ -225,7 +224,7 @@ RSpec.describe Match do
     match.update_board
     expect do
       match.find_winner(5)
-    end.to output("").to_stdout
+    end.to output('').to_stdout
     expect(match.game_continue).to eql(true)
     match.turn += 1
     expect do
@@ -235,7 +234,7 @@ RSpec.describe Match do
     match.update_board
     expect do
       match.find_winner(1)
-    end.to output("").to_stdout
+    end.to output('').to_stdout
     expect(match.game_continue).to eql(true)
     match.turn += 1
     expect do
@@ -245,7 +244,7 @@ RSpec.describe Match do
     match.update_board
     expect do
       match.find_winner(3)
-    end.to output("").to_stdout
+    end.to output('').to_stdout
     expect(match.game_continue).to eql(true)
     match.turn += 1
     expect do
@@ -255,7 +254,7 @@ RSpec.describe Match do
     match.update_board
     expect do
       match.find_winner(6)
-    end.to output("").to_stdout
+    end.to output('').to_stdout
     expect(match.game_continue).to eql(true)
     match.turn += 1
     expect do
@@ -265,7 +264,7 @@ RSpec.describe Match do
     match.update_board
     expect do
       match.find_winner(9)
-    end.to output("").to_stdout
+    end.to output('').to_stdout
     expect(match.game_continue).to eql(true)
     match.turn += 1
     expect do
@@ -275,7 +274,7 @@ RSpec.describe Match do
     match.update_board
     expect do
       match.find_winner(7)
-    end.to output("").to_stdout
+    end.to output('').to_stdout
     expect(match.game_continue).to eql(true)
     match.turn += 1
     expect do
@@ -285,7 +284,7 @@ RSpec.describe Match do
     match.update_board
     expect do
       match.find_winner(8)
-    end.to output("").to_stdout
+    end.to output('').to_stdout
     expect(match.game_continue).to eql(true)
     match.turn += 1
     expect do
