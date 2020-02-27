@@ -1,16 +1,16 @@
-# tic-tac-toe-ruby
+# tic-tac-toe-ruby testing
 
-fifth Ruby Microverse Project By Ángel Cussi &amp; Oscar Russi
+sixth Ruby Microverse Project By Ángel Cussi &amp; Oscar Russi
 
 ![screenshot](./screenshot.png)
 
-# tic-tac-toe-ruby
+# tic-tac-toe-ruby testing
 
-fifth Microverse project for Ruby Curriculum
+sixth Microverse project for Ruby Curriculum
 
 # What it does
 
-- tic tac toe the game for 2 player in the terminal mode
+- it use rspec to test the code on the ruby files.
 
 # HOW TO PLAY
 
@@ -46,7 +46,7 @@ fifth Microverse project for Ruby Curriculum
 
 ## Live Demo
 
-[Live Demo](https://repl.it/@yoxter3423/tic-tac-toe-ruby)
+[Live Demo](https://repl.it/@yoxter3423/tic-tac-toe-ruby)(not working until merge)
 
 ## Authors
 
