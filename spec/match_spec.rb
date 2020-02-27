@@ -292,4 +292,3 @@ RSpec.describe Match do
     end.to output(" 0 | 0 | x \n---|---|---\n x | x | 0 \n---|---|---\n 0 | x | x \nGame was a draw\n").to_stdout
   end
 end
-
