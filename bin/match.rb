@@ -56,4 +56,10 @@ class Match
     puts players[turn % 2].name + ' is the winner'
     @game_continue = false
   end
+  def draw_condition
+    if turn == 9 && game_continue
+      show_board
+      puts 'Game was a draw'
+    end
+  end
 end

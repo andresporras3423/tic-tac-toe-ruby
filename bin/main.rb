@@ -27,10 +27,7 @@ class Game
   # keep playing while no winner and there is possible movements
   def play_game
     play_turn while match.game_continue && match.turn < 9
-    if match.turn == 9 && match.game_continue
-      match.show_board
-      puts 'Game was a draw'
-    end
+    match.draw_condition
     new_game
   end
 
