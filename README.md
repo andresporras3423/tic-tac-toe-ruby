@@ -1,12 +1,12 @@
 # tic-tac-toe-ruby
 
-fifth Ruby Microverse Project By Ángel Cussi &amp; Oscar Russi
+Fifth Ruby Microverse Project By Ángel Cussi &amp; Oscar Russi
 
 ![screenshot](./screenshot.png)
 
 # tic-tac-toe-ruby
 
-fifth Microverse project for Ruby Curriculum
+Fifth Microverse project for Ruby Curriculum
 
 # What it does
 
@@ -15,12 +15,12 @@ fifth Microverse project for Ruby Curriculum
 # HOW TO PLAY
 
 - Tic tac toe is a game for two players, the game is played in a board of 3 x 3 cells
-- First players use X symbol
-- The second player uses 0 symbol
-- Each player can fill a cell with his/her symbol
-- the goal of both players is two add his/her symbol in the same row, column or one of the main diagonals
-- the first player who achieves this goal wins the game
-- if no empty cell and no players have achieved the goal then the game finish with a draw
+- Each player can fill a cell with their respective symbol
+- First player to play always use X symbol and second player use 0 symbol
+- The two players take turns to fill one cell with his/her symbol
+- The objective of the game is to place three connecting marks, of the same symbol, in a row, a column, or a diagonal
+- The first player who achieves this goal wins the game
+- If no empty cell and no players have achieved the goal then the game finish with a draw
 
 # INSTRUCTIONS
 
