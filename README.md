@@ -12,11 +12,11 @@ Fifth Microverse project for Ruby Curriculum
 
 - tic tac toe the game for 2 player in the terminal mode
 
-# HOW TO PLAY
+#  HOW TO PLAY
 
 - Tic tac toe is a game for two players, the game is played in a board of 3 x 3 cells
 - Each player can fill a cell with their respective symbol
-- First player to play always use X symbol and second player use 0 symbol
+- The first player to play always use X symbol and second player use 0 symbol
 - The two players take turns to fill one cell with his/her symbol
 - The objective of the game is to place three connecting marks, of the same symbol, in a row, a column, or a diagonal
 - The first player who achieves this goal wins the game
