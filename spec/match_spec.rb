@@ -140,6 +140,61 @@ RSpec.describe Match do
     end.to output(" 0 | x | 3 \n---|---|---\n 0 | x | 6 \n---|---|---\n 0 | 8 | x \nÁngel is the winner\n").to_stdout
     expect(match.game_continue).to eql(false)
   end
+
+  it 'Test game 3, Oscar wins in fifth movement' do
+    match = Match.new([Player.new('Ángel', 'x'), Player.new('Oscar', '0')])
+    expect do
+      match.show_board
+    end.to output(" 1 | 2 | 3 \n---|---|---\n 4 | 5 | 6 \n---|---|---\n 7 | 8 | 9 \n").to_stdout
+    expect(match.game_continue).to eql(true)
+    match.movements[3] = 'x'
+    match.update_board
+    expect do
+      match.find_winner(4)
+    end.to output("").to_stdout
+    expect(match.game_continue).to eql(true)
+    match.turn += 1
+    expect do
+      match.show_board
+    end.to output(" 1 | 2 | 3 \n---|---|---\n x | 5 | 6 \n---|---|---\n 7 | 8 | 9 \n").to_stdout
+    match.movements[0] = '0'
+    match.update_board
+    expect do
+      match.find_winner(1)
+    end.to output("").to_stdout
+    expect(match.game_continue).to eql(true)
+    match.turn += 1
+    expect do
+      match.show_board
+    end.to output(" 0 | 2 | 3 \n---|---|---\n x | 5 | 6 \n---|---|---\n 7 | 8 | 9 \n").to_stdout
+    match.movements[4] = 'x'
+    match.update_board
+    expect do
+      match.find_winner(5)
+    end.to output("").to_stdout
+    expect(match.game_continue).to eql(true)
+    match.turn += 1
+    expect do
+      match.show_board
+    end.to output(" 0 | 2 | 3 \n---|---|---\n x | x | 6 \n---|---|---\n 7 | 8 | 9 \n").to_stdout
+    match.movements[1] = '0'
+    match.update_board
+    expect do
+      match.find_winner(1)
+    end.to output("").to_stdout
+    expect(match.game_continue).to eql(true)
+    match.turn += 1
+    expect do
+      match.show_board
+    end.to output(" 0 | 0 | 3 \n---|---|---\n x | x | 6 \n---|---|---\n 7 | 8 | 9 \n").to_stdout
+    match.movements[5] = 'x'
+    match.update_board
+    expect do
+      match.find_winner(6)
+    end.to output(" 0 | 0 | 3 \n---|---|---\n x | x | x \n---|---|---\n 7 | 8 | 9 \nÁngel is the winner\n").to_stdout
+    expect(match.game_continue).to eql(false)
+  end
+
 end
 
 # def hello_world()
