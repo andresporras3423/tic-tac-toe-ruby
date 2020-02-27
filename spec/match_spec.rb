@@ -293,15 +293,3 @@ RSpec.describe Match do
   end
 end
 
-# def hello_world()
-#   puts 'hello world'
-# end
-
-# RSpec.describe 'hello_world' do
-#   it 'prints hello world' do
-
-#     expect do
-#       hello_world
-#     end.to output("hello world\n").to_stdout
-#   end
-# end
