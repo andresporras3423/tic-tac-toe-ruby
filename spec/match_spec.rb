@@ -44,11 +44,10 @@ RSpec.describe Match do
     match.movements = %w[1 2 3 x 0 x 7 8 9]
     match.update_board
     row1 = [' x ', '|', ' 2 ', '|', ' 3 ']
-    row2 = ['---', '|', '---', '|', '---']
-    row3 = [' x ', '|', ' 0 ', '|', ' x ']
-    row4 = ['---', '|', '---', '|', '---']
-    row5 = [' 7 ', '|', ' 8 ', '|', ' 9 ']
-    arr = [row1, row2, row3, row4, row5]
+    mrow = ['---', '|', '---', '|', '---']
+    row2 = [' x ', '|', ' 0 ', '|', ' x ']
+    row3 = [' 7 ', '|', ' 8 ', '|', ' 9 ']
+    arr = [row1, mrow, row2, mrow, row3]
     expect(match.board).not_to eql(arr)
   end
   it 'test find_winner when there is no winner yet' do
