@@ -1,4 +1,4 @@
-llCops:
+AllCops:
   Exclude:
     - "README.md"
     - "Guardfile"
