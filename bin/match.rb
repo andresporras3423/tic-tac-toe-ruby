@@ -86,6 +86,7 @@ class Match
 
   def continue_conditions
     return true if game_continue && turn < 9
+    
     false
   end
 
