@@ -20,6 +20,7 @@ class Match
   end
 
   def update_after_move(movement)
+    movement = movement.to_i
     if movements[movement - 1].nil? || movement <= 0
       puts 'please choose a valid spot'
     elsif movements[movement - 1] == '0' || movements[movement - 1] == 'x'

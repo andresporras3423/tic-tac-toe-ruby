@@ -4,34 +4,33 @@ require_relative '../bin/player'
 RSpec.describe Match do
   it 'testing add_player method where names are valid' do
     match = Match.new
-    expect do
-      match.add_players('Oscar', 'Ángel')
-    end.to output("Welcome Oscar and Ángel\n").to_stdout
+    expect {match.add_players('Oscar', 'Ángel')}.to output("Welcome Oscar and Ángel\n").to_stdout
   end
   it 'testing add_player method when names are invalid' do
     match = Match.new
-    expect do
-      match.add_players('Oscar', 'Oscar')
-    end.to output("Please choose valid names\n").to_stdout
+    expect {match.add_players('Oscar', 'Oscar')}.to output("Please choose valid names\n").to_stdout
   end
-  it 'testing update_after_move when move is invalid' do
+  it 'testing update_after_move when input -5 as move' do
     match = Match.new
-    match.add_players('Oscar', 'Ángel')
-    expect do
-      match.update_after_move(-5)
-    end.to output("please choose a valid spot\n").to_stdout
+    expect {match.add_players('Oscar', 'Ángel')}.to output("Welcome Oscar and Ángel\n").to_stdout
+    expect {match.update_after_move(-5)}.to output("please choose a valid spot\n").to_stdout
   end
-  # it 'testing update_after_move when move is valid' do
-  #   match = Match.new
-  #   expect do
-  #     match.update_after_move(5)
-  #   end.to output("").to_stdout
-  # end
-  # it 'testing update_after_move when not available spot' do
-  #   expect do
-  #     match.update_after_move(5)
-  #   end.to output("not available spot\n").to_stdout
-  # end
+  it 'testing update_after_move when input abc as move' do
+    match = Match.new
+    expect {match.add_players('Oscar', 'Ángel')}.to output("Welcome Oscar and Ángel\n").to_stdout
+    expect {match.update_after_move('abc')}.to output("please choose a valid spot\n").to_stdout
+  end
+  it 'testing update_after_move when input 11 as move' do
+    match = Match.new
+    expect {match.add_players('Oscar', 'Ángel')}.to output("Welcome Oscar and Ángel\n").to_stdout
+    expect {match.update_after_move(11)}.to output("please choose a valid spot\n").to_stdout
+  end
+  it 'testing update_after_move when move is valid and then in a not available spot' do
+    match = Match.new
+    expect {match.add_players('Oscar', 'Ángel')}.to output("Welcome Oscar and Ángel\n").to_stdout
+    expect {match.update_after_move(5)}.to output("").to_stdout
+    expect { match.update_after_move(5)}.to output("not available spot\n").to_stdout
+  end
 end
 
 # RSpec.describe Match do

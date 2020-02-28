@@ -50,7 +50,7 @@ class Game
   def play_turn
     match.show_board
     puts match.players[match.turn % 2].name + ', choose your movement (use available numbers): '
-    movement = gets.chomp.to_i
+    movement = gets.chomp
     match.update_after_move(movement)
   end
 end
