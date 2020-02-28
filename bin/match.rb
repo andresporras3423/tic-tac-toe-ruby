@@ -1,6 +1,5 @@
 class Match
-  attr_reader :board, :game_continue
-  attr_accessor :turn, :players, :movements
+  attr_accessor :turn, :players, :movements, :board, :game_continue
   def initialize()
     @players = []
     @game_continue = true
