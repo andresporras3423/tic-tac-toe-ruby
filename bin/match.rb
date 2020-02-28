@@ -1,6 +1,6 @@
 class Match
-  attr_reader :board, :game_continue, :movements
-  attr_accessor :turn, :players
+  attr_reader :board, :game_continue
+  attr_accessor :turn, :players, :movements
   def initialize()
     @players = []
     @game_continue = true
@@ -33,6 +33,19 @@ class Match
     end
   end
 
+  # change the board after a player turn
+  def update_board
+    n = 0
+    board.each do |i|
+      i.map do |j|
+        if j[0] == ' '
+          j[1] = movements[n].to_s
+          n += 1
+        end
+      end
+    end
+  end
+
   # show the current state of the board
   def show_board
     i = 0
@@ -44,19 +57,6 @@ class Match
       end
       print "\n"
       i += 1
-    end
-  end
-
-  # change the board after a player turn
-  def update_board
-    n = 0
-    board.each do |i|
-      i.map do |j|
-        if j[0] == ' '
-          j[1] = movements[n].to_s
-          n += 1
-        end
-      end
     end
   end
 
