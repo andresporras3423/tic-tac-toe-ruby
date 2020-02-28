@@ -18,7 +18,6 @@ class Game
     play_game
   end
 
-
   # keep playing while no winner and there is possible movements
   def play_game
     play_turn while match.continue_conditions
@@ -42,7 +41,7 @@ class Game
         break
       elsif play_again == 2
         break
-      end 
+      end
     end
   end
 

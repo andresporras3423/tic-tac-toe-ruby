@@ -4,17 +4,22 @@ class Match
     @players = []
     @game_continue = true
     @turn = 0
-    @board = [[' 1 ', '|', ' 2 ', '|', ' 3 '], ['---', '|', '---', '|', '---'], [' 4 ', '|', ' 5 ', '|', ' 6 '], ['---', '|', '---', '|', '---'], [' 7 ', '|', ' 8 ', '|', ' 9 ']]
+    row1 = [' x ', '|', ' 2 ', '|', ' 3 ']
+    row2 = ['---', '|', '---', '|', '---']
+    row3 = [' x ', '|', ' 0 ', '|', ' x ']
+    row4 = ['---', '|', '---', '|', '---']
+    row5 = [' 7 ', '|', ' 8 ', '|', ' 9 ']
+    @board = [row1, row2, row3, row4, row5]
     @movements = %w[1 2 3 4 5 6 7 8 9]
   end
 
   def add_players(player1, player2)
     @player = []
-    if player1 != player2 && player1!='' && player2 != ''
+    if player1 != player2 && player1 != '' && player2 != ''
       @players = [Player.new(player1, 'x'), Player.new(player2, '0')]
       puts "Welcome #{player1} and #{player2}"
     else
-      puts "Please choose valid names"
+      puts 'Please choose valid names'
     end
   end
 
@@ -82,7 +87,7 @@ class Match
 
   def continue_conditions
     return true if game_continue && turn < 9
-    return false
+    false
   end
 
   def draw_condition
@@ -92,17 +97,16 @@ class Match
     puts 'Game was a draw'
   end
 
-
   def play_new_game(play_again)
     if play_again == '1'
       puts "great! let's play again"
-      return 1
+      1
     elsif play_again == '2'
-      puts "thank you for playing with us"
-      return 2
+      puts 'thank you for playing with us'
+      2
     else
       puts 'choose a valid option'
-      return 0
+      0
     end
   end
 end
