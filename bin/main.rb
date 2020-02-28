@@ -7,9 +7,9 @@ class Game
   attr_reader :match, :player1, :player2
   def initialize
     @match = Match.new
-    puts 'Enter name of player 1:'
-    @player1 = gets.chomp
     loop do
+      puts 'Enter name of player 1:'
+      @player1 = gets.chomp
       puts 'Enter name of player 2:'
       @player2 = gets.chomp
       match.add_players(@player1, @player2)

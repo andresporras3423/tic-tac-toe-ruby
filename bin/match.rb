@@ -11,24 +11,24 @@ class Match
 
   def add_players(player1, player2)
     @player = []
-    if player1 != player2
+    if player1 != player2 && player1!='' && player2 != ''
       @players = [Player.new(player1, 'x'), Player.new(player2, '0')]
-      puts "welcome #{player1} and #{player2}"
+      puts "Welcome #{player1} and #{player2}"
     else
-      puts "please, choose a different name for second player"
+      puts "Please choose valid names"
     end
   end
 
-  def play_new_game(play_again)
-    if play_again == '1'
-      puts "great! let's play again"
-      return 1
-    elsif play_again == '2'
-      puts "thank you for playing with us"
-      return 2
+  def update_after_move(movement)
+    if movements[movement - 1].nil? || movement <= 0
+      puts 'please choose a valid spot'
+    elsif movements[movement - 1] == '0' || movements[movement - 1] == 'x'
+      puts 'not available spot'
     else
-      puts 'choose a valid option'
-      return 0
+      movements[movement - 1] = players[turn % 2].symbol
+      update_board
+      find_winner(movement)
+      @turn += 1
     end
   end
 
@@ -80,19 +80,6 @@ class Match
     @game_continue = false
   end
 
-  def update_after_move(movement)
-    if movements[movement - 1].nil?
-      puts 'please choose a valid spot'
-    elsif movements[movement - 1] == '0' || movements[movement - 1] == 'x'
-      puts 'not available spot'
-    else
-      movements[movement - 1] = players[turn % 2].symbol
-      update_board
-      find_winner(movement)
-      @turn += 1
-    end
-  end
-
   def continue_conditions
     return true if game_continue && turn < 9
     return false
@@ -103,5 +90,19 @@ class Match
 
     show_board
     puts 'Game was a draw'
+  end
+
+
+  def play_new_game(play_again)
+    if play_again == '1'
+      puts "great! let's play again"
+      return 1
+    elsif play_again == '2'
+      puts "thank you for playing with us"
+      return 2
+    else
+      puts 'choose a valid option'
+      return 0
+    end
   end
 end
