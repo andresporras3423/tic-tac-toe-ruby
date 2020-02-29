@@ -1,25 +1,38 @@
 class Match
-  attr_reader :players, :board, :game_continue, :movements
-  attr_accessor :turn
-  def initialize(players)
-    @players = players
+  attr_accessor :turn, :players, :movements, :board, :game_continue
+  def initialize()
+    @players = []
     @game_continue = true
     @turn = 0
-    @board = [[' 1 ', '|', ' 2 ', '|', ' 3 '], ['---', '|', '---', '|', '---'], [' 4 ', '|', ' 5 ', '|', ' 6 '], ['---', '|', '---', '|', '---'], [' 7 ', '|', ' 8 ', '|', ' 9 ']]
+    row1 = [' 1 ', '|', ' 2 ', '|', ' 3 ']
+    mrow = ['---', '|', '---', '|', '---']
+    row2 = [' 4 ', '|', ' 5 ', '|', ' 6 ']
+    row3 = [' 7 ', '|', ' 8 ', '|', ' 9 ']
+    @board = [row1, mrow, row2, mrow, row3]
     @movements = %w[1 2 3 4 5 6 7 8 9]
   end
 
-  # show the current state of the board
-  def show_board
-    i = 0
-    while i < board.length
-      j = 0
-      while j < board[i].length
-        print board[i][j]
-        j += 1
-      end
-      print "\n"
-      i += 1
+  def add_players(player1, player2)
+    @player = []
+    if player1 != player2 && player1 != '' && player2 != ''
+      @players = [Player.new(player1, 'x'), Player.new(player2, '0')]
+      puts "Welcome #{player1} and #{player2}"
+    else
+      puts 'Please choose valid names'
+    end
+  end
+
+  def update_after_move(movement)
+    movement = movement.to_i
+    if movements[movement - 1].nil? || movement <= 0
+      puts 'please choose a valid spot'
+    elsif movements[movement - 1] == '0' || movements[movement - 1] == 'x'
+      puts 'not available spot'
+    else
+      movements[movement - 1] = players[turn % 2].symbol
+      update_board
+      find_winner(movement)
+      @turn += 1
     end
   end
 
@@ -33,6 +46,20 @@ class Match
           n += 1
         end
       end
+    end
+  end
+
+  # show the current state of the board
+  def show_board
+    i = 0
+    while i < board.length
+      j = 0
+      while j < board[i].length
+        print board[i][j]
+        j += 1
+      end
+      print "\n"
+      i += 1
     end
   end
 
@@ -55,5 +82,31 @@ class Match
     show_board
     puts players[turn % 2].name + ' is the winner'
     @game_continue = false
+  end
+
+  def continue_conditions
+    return true if game_continue && turn < 9
+
+    false
+  end
+
+  def draw_condition
+    return unless turn == 9 && game_continue
+
+    show_board
+    puts 'Game was a draw'
+  end
+
+  def play_new_game(play_again)
+    if play_again == '1'
+      puts "great! let's play again"
+      1
+    elsif play_again == '2'
+      puts 'thank you for playing with us'
+      2
+    else
+      puts 'choose a valid option'
+      0
+    end
   end
 end
