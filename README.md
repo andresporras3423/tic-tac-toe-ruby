@@ -46,7 +46,7 @@ sixth Microverse project for Ruby Curriculum
 
 ## Live Demo
 
-[Live Demo](https://repl.it/@yoxter3423/tic-tac-toe-ruby) (not working until merge)
+[Live Demo](https://repl.it/@yoxter3423/tic-tac-toe-ruby-2)
 
 ## Authors
 
