@@ -1,4 +1,4 @@
-# tic-tac-toe-ruby testing
+# tic-tac-toe-ruby
 
 sixth Ruby Microverse Project By Ángel Cussi &amp; Oscar Russi
 
@@ -10,7 +10,7 @@ sixth Microverse project for Ruby Curriculum
 
 # What it does
 
-- it use rspec to test the code on the ruby files.
+- Play the famous tic-tac-toe game in the terminal
 
 # HOW TO PLAY
 
@@ -55,7 +55,7 @@ sixth Microverse project for Ruby Curriculum
 
 ## Project Presentation (VIDEO)
 
-[![Project presentation](./src/assets/screenshot-video.png)](https://www.loom.com/share/217ab368381e47a992dc8b8015a59ae6)
+[![Project presentation](./screenshot-video.png)](https://www.loom.com/share/217ab368381e47a992dc8b8015a59ae6)
 
 [presentation](https://www.loom.com/share/217ab368381e47a992dc8b8015a59ae6)
 
