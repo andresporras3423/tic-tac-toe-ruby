@@ -36,6 +36,7 @@ class Match
     end
   end
 
+
   # change the board after a player turn
   def update_board
     n = 0

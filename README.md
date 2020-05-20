@@ -44,6 +44,21 @@ sixth Microverse project for Ruby Curriculum
 
 #### and deployed to GitHub
 
+## Unit tests
+
+- In the terminal, go to the project folder and type 'rspec' to run the tests
+
+## Future improvements
+
+- Allow to change player names when a new game will begin
+- add 'choose first player' option to allow defining which player will play first
+
+## Project Presentation (VIDEO)
+
+[![Project presentation](./src/assets/screenshot-video.png)](https://www.loom.com/share/217ab368381e47a992dc8b8015a59ae6)
+
+[presentation](https://www.loom.com/share/217ab368381e47a992dc8b8015a59ae6)
+
 ## Live Demo
 
 [Live Demo](https://repl.it/@yoxter3423/tic-tac-toe-ruby-2)
