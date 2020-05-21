@@ -1,36 +1,36 @@
-# tic-tac-toe-ruby
+# Tic-tac-toe-ruby
 
-sixth Ruby Microverse Project By Ángel Cussi &amp; Oscar Russi
+Sixth Ruby Microverse Project By Ángel Cussi &amp; Oscar Russi.
 
 ![screenshot](./screenshot.png)
 
-# tic-tac-toe-ruby testing
+# Tic-tac-toe-ruby testing
 
-sixth Microverse project for Ruby Curriculum
+Sixth Microverse project for Ruby Curriculum.
 
 # What it does
 
-- Play the famous tic-tac-toe game in the terminal
+- Play the famous tic-tac-toe game in the terminal.
 
 # HOW TO PLAY
 
-- Tic tac toe is a game for two players, the game is played in a board of 3 x 3 cells
-- First players use X symbol
-- The second player uses 0 symbol
-- Each player can fill a cell with his/her symbol
-- the goal of both players is two add his/her symbol in the same row, column or one of the main diagonals
-- the first player who achieves this goal wins the game
-- if no empty cell and no players have achieved the goal then the game finish with a draw
+- Tic tac toe is a game for two players, the game is played in a board of 3 x 3 cells.
+- First players use X symbol.
+- The second player uses 0 symbol.
+- Each player can fill a cell with his/her symbol.
+- The goal of both players is two add his/her symbol in the same row, column or one of the main diagonals.
+- The first player who achieves this goal wins the game.
+- If no empty cell and no players have achieved the goal then the game finish with a draw.
 
 # INSTRUCTIONS
 
-1) Input name of the first player
-2) Input name of the second player. It must be different from the first player name
-3) The first player chooses the cell he wants to use
-4) each cell has a number
-5) the cell will be renamed with an X or an O if you selected and it is valid
-6) you aren't able to select a cell if it already takes it
-7) when the game ends you can choose if you want to play again or not.
+1) Input name of the first player.
+2) Input name of the second player. It must be different from the first player name.
+3) The first player chooses the cell he wants to use.
+4) Each cell has a number.
+5) The cell will be renamed with an X or an O if you selected and it is valid.
+6) You aren't able to select a cell if it already takes it.
+7) When the game ends you can choose if you want to play again or not.
 
 # HOW TO RUN THE GAME
 - **Click on the demo link below and execute the game.**
@@ -40,18 +40,18 @@ sixth Microverse project for Ruby Curriculum
 
 ## Built With
 
-- Ruby
+- Ruby.
 
-#### and deployed to GitHub
+#### And deployed to GitHub
 
 ## Unit tests
 
-- In the terminal, go to the project folder and type 'rspec' to run the tests
+- In the terminal, go to the project folder and type 'rspec' to run the tests.
 
 ## Future improvements
 
-- Allow to change player names when a new game will begin
-- add 'choose first player' option to allow defining which player will play first
+- Allow to change player names when a new game will begin.
+- Add 'choose first player' option to allow defining which player will play first.
 
 ## Project Presentation (VIDEO)
 
