@@ -34,8 +34,8 @@ Sixth Microverse project for Ruby Curriculum.
 
 # HOW TO RUN THE GAME
 - **Click on the demo link below and execute the game.**
-- **you have to click on the run button ahead in the navbar**
-- **wait for the game** 
+- **you have to click on the run button ahead in the navbar.**
+- **wait for the game.** 
 - **you can play.**
 
 ## Built With
