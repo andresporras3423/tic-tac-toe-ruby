@@ -32,7 +32,7 @@ Sixth Microverse project for Ruby Curriculum.
 6) You aren't able to select a cell if it already takes it.
 7) When the game ends you can choose if you want to play again or not.
 
-# HOW TO RUN THE GAME
+#### HOW TO RUN THE GAME
 - **Click on the demo link below and execute the game.**
 - **you have to click on the run button ahead in the navbar.**
 - **wait for the game.** 
